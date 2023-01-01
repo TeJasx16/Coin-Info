@@ -67,7 +67,7 @@ if (err) {
 const Exchangedata = ({url,name,image,rank}) =>(
   <a href={url} target={'blank'} className='flex  flex-col justify-center items-center'>
     <img src={image} height={'40'} width={'40'} alt="" />
-    <h2 >{name}</h2>
+    <h2 className='text-center'>{name}</h2>
     <h3>Rank {rank}</h3>
 
 
