@@ -4,7 +4,7 @@ import Navbar from './compo/Navbar'
 import Home from './compo/Home'
 import Coins from './compo/Coins'
 import About from './compo/About'
-import Exchanges from './compo/Coins'
+import Exchanges from './compo/Exchanges'
 const App = () => {
   return (
     <>

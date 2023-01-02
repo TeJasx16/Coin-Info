@@ -16,7 +16,7 @@ useEffect(() => {
 
       const {data} = await axios.get(`${server}/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false`)
       setExchange(data);
-      console.log(data);
+      // console.log(data);
       setLodeing(false);
     }
     
@@ -48,7 +48,7 @@ if (err) {
                 exchange.map((i)=>(
                   <div className='md:w-[20vw] w-1/2 flex-wrap  p-4 m-4 items-center shadow-md shadow-purple-200 hover:shadow-xl'   key={i.id}>
                     
-                   <Exchangedata  url={i.url} name={i.name} image={i.image} rank={i.trust_score_rank}      />
+                   <Exchangedata   name={i.name} symbol={i.symbol} image={i.image} price={i.current_price}      />
                      
                      
                      </div>
@@ -64,11 +64,12 @@ if (err) {
   )
 }
 
-const Exchangedata = ({url,name,image,rank}) =>(
+const Exchangedata = ({url,name,symbol,image,price}) =>(
   <a href={url} target={'blank'} className='flex  flex-col justify-center items-center'>
     <img src={image} height={'40'} width={'40'} alt="" />
     <h2 className='text-center'>{name}</h2>
-    <h3>Rank {rank}</h3>
+    <h2 className='text-center'>{symbol}</h2>
+    <h3>₹ {price}</h3>
 
 
   </a>
