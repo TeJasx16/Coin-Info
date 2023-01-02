@@ -3,7 +3,7 @@ import axios from 'axios'
 import Loder from './Loader'
 import {server} from '../index' 
 import ErrCompo from './ErrCompo'
-const Coins = () => {
+const Exchanges = () => {
 
 const [exchange, setExchange] = useState([])
 const [lodeing, setLodeing] = useState(true)
@@ -14,9 +14,9 @@ useEffect(() => {
   const fetchdata = async()=>{
   try {
 
-      const {data} = await axios.get(`${server}/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false`)
+      const {data} = await axios.get(`${server}/exchanges`)
       setExchange(data);
-      console.log(data);
+      // console.log(data);
       setLodeing(false);
     }
     
@@ -75,4 +75,4 @@ const Exchangedata = ({url,name,image,rank}) =>(
 
 )
 
-export default Coins
+export default Exchanges
