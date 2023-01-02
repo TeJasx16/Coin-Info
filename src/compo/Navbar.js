@@ -11,11 +11,11 @@ const Navbar = () => {
      
       <span className="ml-3 font-mono text-3xl left-1 md:absolute text-purple-500 ">COIN-INFO</span>
     </Link>
-    <nav className=" flex flex-wrap items-center text-base justify-center">
-      <Link to={'/'} className="mr-5 text-lg md:text-xl hover:text-purple-400">Home</Link>
-      <Link to={'/Exchanges'} className="mr-5 text-lg md:text-xl hover:text-purple-400">Exchanges</Link>
-      <Link to={'/Coins'} className="mr-5 text-lg md:text-xl hover:text-purple-400">Coins</Link>
-      <Link to={'/About'} className="mr-5 text-lg md:text-xl hover:text-purple-400">About</Link>
+    <nav className=" flex  items-center  md:justify-center">
+      <Link to={'/'} className="md:mr-5 mr-3 text-base md:text-xl hover:text-purple-400">Home</Link>
+      <Link to={'/Exchanges'} className="md:mr-5 mr-3 text-base md:text-xl hover:text-purple-400">Exchanges</Link>
+      <Link to={'/Coins'} className="md:mr-5 mr-3 text-base md:text-xl hover:text-purple-400">Coins</Link>
+      <Link to={'/About'} className="md:mr-5 mr-1 text-base md:text-xl hover:text-purple-400">About</Link>
       
     </nav>
    
